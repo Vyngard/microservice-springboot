@@ -10,16 +10,16 @@ In this project, you have two different services:
 
 Each service has its own responsibility. So, the department service is in charge of adding and showing departments, and the employee service is in charge of adding and showing employees.    
 Also, the department service interacts with the employee service, so if we want to get a list of employees of a specific department, we can call the employee service from the department service.   
-in below, you can see the entire architecture of this project.
+below, you can see the entire architecture of this project.
 
 ![Architecture](./Project%20Architecture.jpg)
 
 # Technologies
 - HttpExchange: To connect department and employee services with each other.
-- Eureka Service Registry: It has all the information about the services. So we can use this for scaling. Also, when we want to do the API call from department service, we use service registry, since it has all the information about the employee service instances. So, it will handle load balancing as well.
-- API Gateway: It is a gateway for each public request coming to our architecture. So, others cannot call our APIs directly. We also handle security in here to make sure that only authorized users can call our APIs.
+- Eureka Service Registry: It has all the information about the services. So we can use this for scaling. Also, when we want to do the API call from department service, we use the service registry, since it has all the information about the employee service instances. So, it will handle load balancing as well.
+- Spring Cloud API Gateway: It is a gateway for each public request coming to our architecture. So, others cannot call our APIs directly. We also handle security here to make sure that only authorized users can call our APIs.
 - Config Server: It will serve all the default configurations for each service.
-- Zipkin: It doest the log tracing for each request, so we can do the debugging easily.
+- Zipkin: It does the log tracing for each request so that we can do the debugging easily.
 
 # How to run
 Just clone the project and run all services.
