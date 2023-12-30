@@ -15,11 +15,11 @@ below, you can see the entire architecture of this project.
 ![Architecture](./Project%20Architecture.jpg)
 
 # Technologies
-- Http Interface: Using Spring HttpExchange To connect department and employee services with each other.
 - Eureka Service Registry: It has all the information about the services. So we can use this for scaling. Also, when we want to do the API call from department service, we use the service registry, since it has all the information about the employee service instances. So, it will handle load balancing as well.
 - Spring Cloud API Gateway: It is a gateway for each public request coming to our architecture. So, others cannot call our APIs directly. We also handle security here to make sure that only authorized users can call our APIs.
 - Config Server: It will serve all the default configurations for each service.
 - Zipkin: It does the log tracing for each request so that we can do the debugging easily.
+- Http Interface: Using Spring HttpExchange To connect department and employee services with each other.
 
 # How to run
 Just clone the project and run all services.
