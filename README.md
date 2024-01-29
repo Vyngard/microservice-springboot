@@ -12,7 +12,7 @@ Each service has its own responsibility. So, the department service is in charge
 Also, the department service interacts with the employee service, so if we want to get a list of employees of a specific department, we can call the employee service from the department service.   
 below, you can see the entire architecture of this project.
 
-![Architecture](./Project%20Architecture.jpg)
+![Architecture](./Architecture.jpg)
 
 # Technologies
 - Eureka Service Registry: It has all the information about the services. So we can use this for scaling. Also, when we want to do the API call from department service, we use the service registry, since it has all the information about the employee service instances. So, it will handle load balancing as well.
